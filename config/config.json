@@ -1,0 +1,8 @@
+{
+  "backup_dirs": [
+    "/home/vinoth/project",
+    "/etc/nginx"
+  ],
+  "backup_destination": "/home/vinoth/backup",
+  "retention_days": 7
+}
