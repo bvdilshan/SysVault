@@ -1,8 +1,11 @@
 {
   "backup_dirs": [
-    "/home/vinoth/project",
-    "/etc/nginx"
+    "/home/vinoth/MyBackups"
   ],
-  "backup_destination": "/home/vinoth/backup",
-  "retention_days": 7
+  "backup_destination": "/home/vinoth/backups",
+  "retention_days": 7,
+  "aws_s3": {
+    "bucket_name": "system-backups-s3-buckets",
+    "region": "us-east-1"
+  }
 }

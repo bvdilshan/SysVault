@@ -13,7 +13,6 @@ def create_backup():
     dirs_to_backup = config.get("backup_dirs", [])
     dest_dir = config.get("backup_destination")
 
-
     if not os.path.exists(dest_dir):
         os.makedirs(dest_dir)
 
