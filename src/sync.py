@@ -6,7 +6,8 @@ from botocore.exceptions import NoCredentialsError, ClientError
 from logger import logger
 
 def load_config():
-    config_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../config/config.json'))
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    config_path = os.path.join(base_dir, 'config', 'config.json')
     try:
         with open(config_path, 'r') as f:
             return json.load(f)
@@ -43,7 +44,7 @@ def upload_to_s3(file_path):
         logger.error(f"AWS S3 ClientError: {e}")
         return False
     except Exception as e:
-        logger.error(f"S3 upload failed due to an unexpected error: {e}")
+        logger.error(f"S3 upload failed due to an unexpected error: {e}", exc_info=True)
         return False
 
 def clean_s3_old_backups():
