@@ -11,8 +11,8 @@
   "email_notifications": {
   "enabled": true,
   "smtp_server": "smtp.gmail.com",
-  "smtp_port": 587,
+  "smtp_port": 465,
   "sender_email": "vinothdilshanbvd@gmail.com",
-  "receiver_email": "vinothdilshan@gmail.com"
+  "receiver_email": "vinothdilshanbvd@gmail.com"
 }
 }

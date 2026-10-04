@@ -6,7 +6,8 @@ from datetime import datetime
 from logger import logger
 
 def load_config():
-    config_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../config/config.json'))
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    config_path = os.path.join(base_dir, 'config', 'config.json')
     try:
         with open(config_path, 'r') as f:
             return json.load(f)
